@@ -1,0 +1,9 @@
+# MANIFEST.in
+
+include LICENSE
+include README.md
+include requirements.txt
+recursive-include school_management/templates *
+recursive-include school_management/static *
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]

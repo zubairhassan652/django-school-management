@@ -1,0 +1,58 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "django-school-management"
+version = "1.0.0"
+description = "Role-based school management system for Django"
+readme = "README.md"
+requires-python = ">=3.13"
+license = "MIT"
+authors = [
+    {name = "Zubair Hassan", email = "zubairhassan652@gmail.com"}
+]
+keywords = ["django", "school", "management", "education", "admin"]
+classifiers = [
+    "Framework :: Django",
+    "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+    "Django>=6.0.5,<7.0",
+    "redis>=4.5.0",
+    "kafka-python>=2.0.2",
+    "python-decouple>=3.8",
+    "pillow>=12.2.0",
+    "build==1.5.0",
+    "twine==6.2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/zubairhassan652/django-school-management"
+Repository = "https://github.com/zubairhassan652/django-school-management"
+Issues = "https://github.com/zubairhassan652/django-school-management/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["school_management*"]
+exclude = ["example_project*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-django>=4.5.0",
+    "black>=23.0.0",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+python_files = ["tests.py", "test_*.py", "*_tests.py"]

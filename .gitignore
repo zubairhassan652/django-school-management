@@ -1,0 +1,11 @@
+.venv
+venv
+example_project
+__pycache__
+*.pyc
+*egg-info
+dist
+build
+*.log
+*.sqlite3
+media
