@@ -1,4 +1,8 @@
 # Installation
+Run below command to install it
+```
+pip install django-school-management
+```
 
 Add app in installed apps like below.
 ```
