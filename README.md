@@ -11,6 +11,13 @@ INSTALLED_APPS = [
     'school_management',
 ]
 ```
+
+Add middleware like
+```
+...
+'school_management.middleware.ActivityLoggingMiddleware',
+```
+
 # Run Migrations
 ```
 python manage.py migrate
